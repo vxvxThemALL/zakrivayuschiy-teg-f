@@ -151,16 +151,54 @@
 
 .content__card-image-wrapper {
   position: relative;
-
 }
 
 .content__card-image {
   display: block;
   width: 100%;
   object-fit: cover;
-  object-position: right;
   margin-left: auto;
   aspect-ratio: 1 / 1;
+}
+
+.card-image-1 {
+  object-position: bottom;
+  filter: contrast(120%);
+}
+
+.card-image-2 {
+  object-position: right;
+  filter: grayscale(.8);
+}
+
+.card-image-3 {
+  object-position: left;
+  filter: hue-rotate(-210deg);
+}
+
+.card-image-4 {
+  object-position: center;
+  filter: saturate(158%);
+}
+
+.card-image-5 {
+  object-position: center;
+  filter: blur(.3rem);
+}
+
+.card-image-6 {
+  object-position: center;
+  filter: opacity(.6);
+}
+
+.card-image-7 {
+  object-position: center;
+  filter: invert(.3);
+}
+
+.card-image-8 {
+  object-position: center;
+  filter: sepia(80%) grayscale(.9) opacity(.7);
 }
 
 .content__card-label {
@@ -204,11 +242,13 @@
   display: flex;
   justify-content: right;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
   max-height: 38px;
 }
 
 .card__icon-button {
+  position: relative;
+  top: 4px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -333,6 +373,7 @@
   align-items: center;
   position: relative;
   padding-block: 15px;
+  margin-block-end: 105px;
   gap: 8px;
   background-color: var(--bgc);
   border: 2px solid var(--accent-color);
